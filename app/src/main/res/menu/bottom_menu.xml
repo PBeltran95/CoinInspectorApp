@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/homeFragment"
+        android:icon="@drawable/ic_baseline_home"
+        android:title="Home"/>
+
+    <item android:id="@+id/walletFragment"
+        android:icon="@drawable/ic_baseline_account_balance_wallet"
+        android:title="Wallet"/>
+
+    <item android:id="@+id/followedFragment"
+        android:icon="@drawable/ic_baseline_favorite"
+        android:title="Followed"/>
+
+    <item android:id="@+id/settingsFragment"
+        android:icon="@drawable/ic_baseline_settings"
+        android:title="Settings"/>
+
+</menu>
