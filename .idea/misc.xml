@@ -5,9 +5,10 @@
       <map>
         <entry key="..\:/Users/pablo/AndroidStudioProjects/CoinInspector/app/src/main/res/layout/activity_main.xml" value="0.365625" />
         <entry key="..\:/Users/pablo/AndroidStudioProjects/CoinInspector/app/src/main/res/layout/fragment_followed.xml" value="0.365625" />
-        <entry key="..\:/Users/pablo/AndroidStudioProjects/CoinInspector/app/src/main/res/layout/fragment_home.xml" value="0.365625" />
+        <entry key="..\:/Users/pablo/AndroidStudioProjects/CoinInspector/app/src/main/res/layout/fragment_home.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/pablo/AndroidStudioProjects/CoinInspector/app/src/main/res/layout/fragment_settings.xml" value="0.365625" />
         <entry key="..\:/Users/pablo/AndroidStudioProjects/CoinInspector/app/src/main/res/layout/fragment_wallet.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/pablo/AndroidStudioProjects/CoinInspector/app/src/main/res/layout/item_coin.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/pablo/AndroidStudioProjects/CoinInspector/app/src/main/res/menu/bottom_menu.xml" value="0.365625" />
       </map>
     </option>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="148dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLine2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.60" />
+
+    <ImageView
+        android:id="@+id/imgCoin"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="16dp"
+        tools:src= "@drawable/ic_launcher_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvCoinName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textAppearance="?attr/textAppearanceSubtitle1"
+        app:layout_constraintBottom_toBottomOf="@id/imgCoin"
+        app:layout_constraintEnd_toStartOf="@+id/guideLine2"
+        app:layout_constraintStart_toEndOf="@id/imgCoin"
+        app:layout_constraintTop_toTopOf="@id/imgCoin"
+        tools:text="Bitcoin" />
+    <TextView
+        android:id="@+id/tvRank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="#1"
+        app:layout_constraintBottom_toTopOf="@id/tvCoinName"
+        app:layout_constraintStart_toStartOf="@id/tvCoinName"/>
+
+    <TextView
+        android:id="@+id/tvCoinMarketCap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        tools:text="Market cap : 433541351"
+        app:layout_constraintTop_toTopOf="@id/imgCoin"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+        android:id="@+id/tvCoinBtcPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        tools:text="1 btc"
+        app:layout_constraintTop_toBottomOf="@id/tvCoinMarketCap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvCoinPrice"/>
+    <TextView
+        android:id="@+id/tvCoinPrice"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        tools:text="43 500 u$d"
+        app:layout_constraintBottom_toBottomOf="@id/imgCoin"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#A3A0A0"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,5 +20,4 @@ class CoinViewModel @Inject constructor (private val repo:CoinRepositoryImpl) : 
             emit(Response.Failure(e))
         }
     }
-
 }
