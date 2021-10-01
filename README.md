@@ -18,4 +18,4 @@ Ann app who  shows the current price of cryptos.
 ##
 And more are coming soon! This project is in development yet!
 
-<img src="Screenshot_1633056492.png" height="400", widht="400"><img src="Screenshot_1633056503.png" height="400">
+<img src="Screenshot_1633056492.png" width="300" height="600"><img src="Screenshot_1633056503.png" width="300" height="600">
