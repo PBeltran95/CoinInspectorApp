@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import ar.com.thecoininspector.coininspector.R
 import ar.com.thecoininspector.coininspector.data.models.Coin
@@ -16,9 +17,18 @@ import coil.decode.SvgDecoder
 import coil.load
 import coil.request.ImageRequest
 
-class HomeAdapter(val coins:ArrayList<Coin>): RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
+class HomeAdapter: RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
+
+    private var coins:ArrayList<Coin> = arrayListOf()
 
     private lateinit var context:Context
+
+    fun setData(newList: ArrayList<Coin>){
+        val diffUtils = DiffUtils(coins, newList)
+        val diffResult = DiffUtil.calculateDiff(diffUtils)
+        this.coins = newList
+        diffResult.dispatchUpdatesTo(this)
+    }
 
 
 

@@ -12,6 +12,7 @@ import ar.com.thecoininspector.coininspector.data.models.Coin
 import ar.com.thecoininspector.coininspector.databinding.FragmentHomeBinding
 import ar.com.thecoininspector.coininspector.presentation.remote.CoinViewModel
 import ar.com.thecoininspector.coininspector.ui.home.adapter.HomeAdapter
+import ar.com.thecoininspector.coininspector.utils.toast
 import dagger.hilt.android.AndroidEntryPoint
 
 
@@ -20,6 +21,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
 
     private lateinit var binding: FragmentHomeBinding
     private val viewModel by viewModels<CoinViewModel>()
+    private val homeAdapter by lazy { HomeAdapter() }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -39,15 +41,15 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                     initAdapter(coins)
                 }
                 is Response.Failure -> {
-                    Toast.makeText(requireContext(), "Error: ${it.throwable}",Toast.LENGTH_SHORT).show()
+                    toast(requireContext(), it.throwable.message)
                 }
             }
         })
     }
 
     private fun initAdapter(coins: ArrayList<Coin>) {
-        binding.rvHome.adapter =
-            HomeAdapter(coins)
+        binding.rvHome.adapter = homeAdapter
+        homeAdapter.setData(coins)
     }
 
 }

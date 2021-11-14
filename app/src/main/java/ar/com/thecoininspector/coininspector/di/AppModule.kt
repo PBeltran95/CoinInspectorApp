@@ -26,26 +26,3 @@ object AppModule {
     @Provides
     fun providesWebService(retrofit: Retrofit) = retrofit.create(WebService::class.java)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//fun providesWebService(retrofit: Retrofit) = retrofit.create(WebService::class.java)
-
-
-
-// fun providesRetrofit() = Retrofit.Builder()
-//        .baseUrl(AppConstants.BASE_URL)
-//        .addConverterFactory(GsonConverterFactory.create(GsonBuilder().create()))
-//        .build()

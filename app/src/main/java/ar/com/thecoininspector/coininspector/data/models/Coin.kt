@@ -33,6 +33,6 @@ data class Coin(
     val btcPrice:String = "",
     val change:String = "",
     val rank:Int = 0,
-                    )
+)
 
 
