@@ -20,4 +20,13 @@ class CoinViewModel @Inject constructor (private val repo:CoinRepositoryImpl) : 
             emit(Response.Failure(e))
         }
     }
+
+    fun fetchNews() = liveData(viewModelScope.coroutineContext + Dispatchers.IO){
+        emit(Response.Loading())
+        try {
+            emit(Response.Success(repo.getNews()))
+        }catch (e:Exception){
+            emit(Response.Failure(e))
+        }
+    }
 }

@@ -1,6 +1,7 @@
 package ar.com.thecoininspector.coininspector.ui.home.adapter
 
 import android.content.Context
+import android.content.res.Resources
 import android.graphics.drawable.PictureDrawable
 import android.net.Uri
 import android.view.LayoutInflater
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView
 import ar.com.thecoininspector.coininspector.R
 import ar.com.thecoininspector.coininspector.data.models.Coin
 import ar.com.thecoininspector.coininspector.databinding.ItemCoinBinding
+import ar.com.thecoininspector.coininspector.utils.loadUrl
 import coil.ImageLoader
 import coil.decode.SvgDecoder
 import coil.load
@@ -47,30 +49,16 @@ class HomeAdapter: RecyclerView.Adapter<HomeAdapter.HomeViewHolder>() {
             with(binding){
                 tvCoinName.text = item.name
                 val coinPriceInBtc = item.btcPrice.toFloat()
-                tvCoinBtcPrice.text = String.format("BTC: %.6f", coinPriceInBtc)
-                tvCoinMarketCap.text = "Marketcap: \$${item.marketCap}"
                 val coinPrice = item.price.toFloat()
+                tvCoinBtcPrice.text = String.format("BTC: %.6f", coinPriceInBtc)
+                tvCoinMarketCap.text = context.getString(R.string.marketCap, item.marketCap)
                 tvCoinPrice.text = String.format("\$ %.2f", coinPrice )
-                tvRank.text = "#${item.rank}"
+                tvRank.text = context.getString(R.string.coinRanking, item.rank)
             }
         }
     }
 
-    private fun ImageView.loadUrl(url:String) {
-        val imageLoader = ImageLoader.Builder(context)
-            .componentRegistry { add(SvgDecoder(context)) }
-            .build()
 
-        val request = ImageRequest.Builder(context)
-            .crossfade(true)
-            .crossfade(500)
-            .data(url)
-            .target(this)
-            .build()
-
-        imageLoader.enqueue(request)
-
-    }
 
     override fun getItemCount(): Int = coins.size
 

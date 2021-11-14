@@ -2,4 +2,11 @@
     <string name="app_name">CoinInspector</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="marketCap">Marketcap : $%1$s</string>
+    <string name="coinRanking"># %1$d</string>
+    <string name="home">Home</string>
+    <string name="wallet">Wallet</string>
+    <string name="followed">Followed</string>
+    <string name="settings">Settings</string>
+
 </resources>

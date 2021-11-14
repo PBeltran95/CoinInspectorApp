@@ -12,9 +12,9 @@
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/walletFragment"
-        android:name="ar.com.thecoininspector.coininspector.ui.wallet.WalletFragment"
+        android:name="ar.com.thecoininspector.coininspector.ui.news.NewsFragment"
         android:label="fragment_wallet"
-        tools:layout="@layout/fragment_wallet" />
+        tools:layout="@layout/fragment_news" />
     <fragment
         android:id="@+id/settingsFragment"
         android:name="ar.com.thecoininspector.coininspector.ui.settings.SettingsFragment"
